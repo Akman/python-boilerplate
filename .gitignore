@@ -1,0 +1,19 @@
+# general things to ignore
+build/
+dist/
+*.egg-info/
+*.egg[s]
+*.py[cod]
+__pycache__/
+*.so
+*~
+
+# due to using venv
+.env/
+
+# due to using tox and pytest
+.tox
+.cache
+
+# ignore vscode settings
+.vscode/
