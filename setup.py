@@ -201,7 +201,7 @@ config: dict = {
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     'install_requires': [ # Optional
-        'curses',
+        # 'curses',
         'matplotlib',
         'numpy',
     ],
@@ -275,7 +275,7 @@ config: dict = {
 
     # List of binary scripts that need to be included in distribution.
     'scripts': [ # Optional
-        'bin/sample'
+        'bin/sample_script'
     ],
 
     # A list of strings naming resources that should be extracted together,
