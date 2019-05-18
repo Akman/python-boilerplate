@@ -9,7 +9,7 @@ __pycache__/
 *~
 
 # due to using venv
-.env/
+.venv/
 
 # due to using tox and pytest
 .tox

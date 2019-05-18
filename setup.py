@@ -5,9 +5,6 @@ https://packaging.python.org/guides/distributing-packages-using-setuptools/
 https://setuptools.readthedocs.io/en/latest/setuptools.html
 """
 
-# Always prefer setuptools over distutils
-from setuptools import setup, find_packages
-
 from os import path
 
 # io.open is needed for projects that support Python 2.7
@@ -16,17 +13,20 @@ from os import path
 # Python 3 only projects can skip this import
 from io import open
 
-here = path.abspath(path.dirname(__file__))
+# Always prefer setuptools over distutils
+from setuptools import setup, find_packages
 
-# Get the long description from the README file
-def readme():
-    with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-        return f.read()
+here: str = path.abspath(path.dirname(__file__))
+
+def read(file_name):
+    """ Get data from a file """
+    with open(path.join(here, file_name), encoding='utf-8') as file:
+        return file.read()
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
 # https://setuptools.readthedocs.io/en/latest/setuptools.html#options
-config = {
+config: dict = {
 
     # This is the name of your project. The first time you publish this
     # package, this name will be registered for you. It will determine how
@@ -122,7 +122,7 @@ config = {
     'license': 'MIT', # Optional
 
     # This includes the license file.
-    'license_file': 'LICENSE.txt', # Optional
+    # 'license_file': 'LICENSE.txt', # Optional
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
@@ -137,7 +137,7 @@ config = {
     #
     # This field corresponds to the "Description" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#description-optional
-    'long_description': readme(), # Optional
+    'long_description': read('README.md'), # Optional
 
     # Denotes that our long_description is in Markdown; valid values are
     # text/plain, text/x-rst, and text/markdown
@@ -188,7 +188,8 @@ config = {
     # already. If you want them to be installed, as well as being available
     # when the setup script is run, you should add them to install_requires
     # and setup_requires.
-    # 'setup_requires': [], # Optional
+    'setup_requires': [ # Optional
+    ],
 
     # A string or list of strings specifying what other distributions need to be
     # installed when this one is.
@@ -200,8 +201,9 @@ config = {
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     'install_requires': [ # Optional
+        'curses',
         'matplotlib',
-        'numpy'
+        'numpy',
     ],
 
     # A dictionary mapping names of "extras" (optional features of your project)
@@ -246,11 +248,11 @@ config = {
     # platform.
     'entry_points': { # Optional
         'console_scripts': [
-            'start=akman.sample.command_line:main',
+            'sample_console=sample.cli:main',
         ],
-        # 'gui_scripts': [
-        #    akman.sample.gui:main',
-        # ]
+        'gui_scripts': [
+            'sample_gui=sample.gui:main',
+        ]
     },
 
     # Convert the source code from Python 2 to Python 3 with 2to3 during
@@ -272,9 +274,9 @@ config = {
     # 'convert_2to3_doctests': [], # Optional
 
     # List of binary scripts that need to be included in distribution.
-    # 'scripts': [ # Optional
-    #     'bin/sample'
-    # ],
+    'scripts': [ # Optional
+        'bin/sample'
+    ],
 
     # A list of strings naming resources that should be extracted together,
     # if any of them is needed, or if any C extensions included in the project
@@ -297,8 +299,9 @@ config = {
     # setup_requires or tests_require. They will also be written into
     # the egg's metadata for use by tools like EasyInstall to use when
     # installing an .egg file.
-    # 'dependency_links': [ # Optional
-    # ],
+    'dependency_links': [ # Optional
+        'https://download.lfd.uci.edu/pythonlibs/q5gtlas7/curses-2.2+utf8-cp37-cp37m-win_amd64.whl',
+    ],
 
     # If your project's tests need one or more additional packages besides
     # those needed to install it, you can use this option to specify them.
@@ -309,9 +312,9 @@ config = {
     # that these required projects will not be installed on the system where
     # the tests are run, but only downloaded to the project's setup directory
     # if they're not already installed locally.
-    # 'tests_require': [ # Optional
-    #     'nose',
-    # ],
+    'tests_require': [ # Optional
+        'nose',
+    ],
 
     # If set to True, this tells setuptools to automatically include any data
     # files it finds inside your package directories that are specified by
@@ -349,7 +352,7 @@ config = {
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
     'package_data': { # Optional
-        'akman.sample': ['sample.dat'],
+        'sample': ['sample.dat'],
     },
 
     # A dictionary mapping package names to lists of glob patterns that
@@ -368,10 +371,9 @@ config = {
     # declare them in each project that contains any subpackages of
     # the namespace package, and as long as the namespace package's __init__.py
     # does not contain any code other than a namespace declaration.
-    # See the section below on Namespace Packages for more information.
-    'namespace_packages': [ # Optional
-        'akman'
-    ],
+    # 'namespace_packages': [ # Optional
+    #     'sample'
+    # ],
 
     # TODO: ?
     # 'py_modules': '', # Optional
