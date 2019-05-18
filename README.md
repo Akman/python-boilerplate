@@ -1,5 +1,55 @@
 # A sample Python project
 
+https://github.com/Akman/python-boilerplate
+
+Все действия производятся из директории проекта,
+там где лежит setup.py
+
+Создаем виртуальное окружение
+$python -m venv .venv
+
+Активируем виртуальное окружение
+$. .venv/Scripts/activate (Windows)
+$. .venv/usr/bin/activate (Linux)
+
+Обновляем системные пакеты
+$python -m pip install -U pip
+$python -m pip install -U setuptools
+$python -m pip install -U wheel
+
+Только для Windows устанавливаем пакет curses
+pip install etc/curses-2.2+utf8-cp37-cp37m-win32.whl
+Либо загружаем последнюю версию здесь:
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#curses
+
+Устанавливаем наш пакет sample с установкой зависимостей
+$python -m pip install -e .
+
+Устанавливаем зависимости для разработки
+$python -m pip install -e .[dev]
+
+Проверяем линтером
+$python -m pylint -v sample
+
+Устанавливаем зависимости для тестирования
+$python -m pip install -e .[test]
+
+Запускаем тесты
+$python -m nose -v sample
+$python -m unittest discover -v sample
+
+Запускаем в консольном режиме
+$python -m sample
+
+Запускаем в gui режиме
+$python -m sample --gui
+
+Деактивируем виртуальное окружение
+$deactivate
+
+
+
+
 A sample project that exists as an aid to the [Python Packaging User
 Guide][packaging guide]'s [Tutorial on Packaging and Distributing
 Projects][distribution tutorial].

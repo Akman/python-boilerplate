@@ -220,8 +220,13 @@ config: dict = {
     # Similar to `install_requires` above, these must be valid existing
     # projects.
     'extras_require': { # Optional
-        'dev': ['check-manifest'],
-        'test': ['nose'],
+        'dev': [
+            'pylint',
+            'check-manifest'
+        ],
+        'test': [
+            'nose'
+        ],
     },
 
     # A string corresponding to a version specifier (as defined in PEP 440) for
