@@ -13,3 +13,4 @@ recursive-include data *
 # Include other files
 include tox.ini
 include .travis.yml
+include .editorconfig
