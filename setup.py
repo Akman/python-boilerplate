@@ -225,7 +225,7 @@ config: dict = {
             'check-manifest'
         ],
         'test': [
-            'nose'
+            'pytest'
         ],
     },
 
@@ -318,7 +318,7 @@ config: dict = {
     # the tests are run, but only downloaded to the project's setup directory
     # if they're not already installed locally.
     'tests_require': [ # Optional
-        'nose',
+        'pytest',
     ],
 
     # If set to True, this tells setuptools to automatically include any data

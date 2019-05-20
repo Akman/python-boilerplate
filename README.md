@@ -1,87 +1,135 @@
-# A sample Python project
+# Python boilerplate project
 
-https://github.com/Akman/python-boilerplate
-
-Все действия производятся из директории проекта,
-там где лежит setup.py
-
-Создаем виртуальное окружение
-$python -m venv .venv
-
-Активируем виртуальное окружение
-$. .venv/Scripts/activate (Windows)
-$. .venv/usr/bin/activate (Linux)
-
-Обновляем системные пакеты
-$python -m pip install -U pip
-$python -m pip install -U setuptools
-$python -m pip install -U wheel
-
-Только для Windows устанавливаем пакет curses
-pip install etc/curses-2.2+utf8-cp37-cp37m-win32.whl
-Либо загружаем последнюю версию здесь:
-https://www.lfd.uci.edu/~gohlke/pythonlibs/#curses
-
-Устанавливаем наш пакет sample с установкой зависимостей
-$python -m pip install -e .
-
-Устанавливаем зависимости для разработки
-$python -m pip install -e .[dev]
-
-Проверяем линтером
-$python -m pylint -v sample
-
-Устанавливаем зависимости для тестирования
-$python -m pip install -e .[test]
-
-Запускаем тесты
-$python -m nose -v sample
-$python -m unittest discover -v sample
-
-Запускаем в консольном режиме
-$python -m sample
-
-Запускаем в gui режиме
-$python -m sample --gui
-
-Деактивируем виртуальное окружение
-$deactivate
-
-
-
-
-A sample project that exists as an aid to the [Python Packaging User
+A boilerplate project that exists as an aid to the [Python Packaging User
 Guide][packaging guide]'s [Tutorial on Packaging and Distributing
 Projects][distribution tutorial].
 
-This project does not aim to cover best practices for Python project
-development as a whole. For example, it does not provide guidance or tool
-recommendations for version control, documentation, or testing.
+This project aims to cover best practices for Python project
+development as a whole. It provides tool recommendations for linting and
+testing.
 
 [The source for this project is available here][src].
 
-Most of the configuration for a Python project is done in the `setup.py` file,
-an example of which is included in this project. You should edit this file
-accordingly to adapt this sample project to your needs.
+Most of the configuration for project is done in the `setup.py` file.
+You should edit this file accordingly to adapt this boilerplate project
+to your needs.
 
 ----
 
 This is the README file for the project.
 
-The file should use UTF-8 encoding and can be written using
-[reStructuredText][rst] or [markdown][md use] with the appropriate [key set][md
-use]. It will be used to generate the project webpage on PyPI and will be
-displayed as the project homepage on common code-hosting services, and should be
-written for that purpose.
+The file should use UTF-8 encoding and can be written using [markdown][md use]
+with the appropriate [key set][md use]. It will be used to generate the project
+webpage on PyPI and will be displayed as the project homepage on common
+code-hosting services, and should be written for that purpose.
 
 Typical contents for this file would include an overview of the project, basic
 usage examples, etc. Generally, including the project changelog in here is not a
 good idea, although a simple “What's New” section for the most recent version
 may be appropriate.
 
+----
+
+Все действия производятся из директории проекта,
+там где лежит ***setup.py***
+
+## Virtual environment
+
+### Create virtual environment
+
+```bash
+$ python -m venv .venv
+```
+
+### Activate virtual environment
+
+```bash
+$ . .venv/Scripts/activate (Windows)
+$ . .venv/usr/bin/activate (Linux)
+```
+
+### Deactivate virtual environment
+
+```bash
+$ deactivate
+```
+
+Further expected that virtual environment is **active**
+
+## Install and update system packages
+
+```bash
+$ python -m pip install -U pip
+$ python -m pip install -U setuptools
+$ python -m pip install -U wheel
+```
+
+### Install *curses* (Windows only)
+
+```bash
+$ pip install ./etc/curses-2.2+utf8-cp37-cp37m-win32.whl
+```
+
+The last version of *curses* for Windows is available here:
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#curses
+
+## Install package in editable mode
+
+In *editable* mode, the package will not installed on the system,
+and becomes available from the current directory. All changes in it
+are immediately available and no need to reinstall it every time when
+changes done.
+
+```bash
+$ python -m pip install -e .
+```
+
+### Install development dependencies
+
+See *extras_require.dev* in **setup.py**
+
+```bash
+$ python -m pip install -e .[dev]
+```
+
+### Install testing dependencies
+
+See *extras_require.test* in **setup.py**
+
+```bash
+$ python -m pip install -e .[test]
+```
+
+## Lint
+
+```bash
+$ python -m pylint -v sample
+```
+
+
+## Test
+
+```bash
+$ python -m nose -v sample
+$ python -m unittest discover -v sample
+```
+
+## Run
+
+### Console
+
+```bash
+$ python -m sample
+```
+
+### GUI
+
+```bash
+$ python -m sample --gui
+```
+
 [packaging guide]: https://packaging.python.org
 [distribution tutorial]: https://packaging.python.org/tutorials/packaging-projects/
-[src]: https://github.com/pypa/sampleproject
-[rst]: http://docutils.sourceforge.net/rst.html
+[src]: https://github.com/Akman/python-boilerplate
 [md]: https://tools.ietf.org/html/rfc7764#section-3.5 "CommonMark variant"
 [md use]: https://packaging.python.org/specifications/core-metadata/#description-content-type-optional

@@ -11,10 +11,9 @@ __pycache__/
 # due to using venv
 .venv/
 
-# due to using tox, pytest, nose
+# due to using tox, pytest
 .tox
-.cache
-.noseids
+.pytest_cache
 
 # ignore vscode settings
 .vscode/
