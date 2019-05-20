@@ -122,6 +122,20 @@ $ python sample --gui
 $ sample_gui
 ```
 
+## Distribute
+
+To create a source distribution
+
+```bash
+$ python setup.py sdist
+```
+
+To create a binary distribution
+
+```bash
+$ python setup.py bdist_wheel
+```
+
 [packaging guide]: https://packaging.python.org
 [distribution tutorial]: https://packaging.python.org/tutorials/packaging-projects/
 [src]: https://github.com/Akman/python-boilerplate
