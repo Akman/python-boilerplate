@@ -3,6 +3,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def main():
     """Entry point for gui"""
     # Create a list of evenly-spaced numbers over the range

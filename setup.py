@@ -18,10 +18,12 @@ from setuptools import setup, find_packages
 
 here: str = path.abspath(path.dirname(__file__))
 
+
 def read(file_name):
     """ Get data from a file """
     with open(path.join(here, file_name), encoding='utf-8') as file:
         return file.read()
+
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
@@ -39,7 +41,7 @@ config: dict = {
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    'name': 'python-boilerplate', # Required
+    'name': 'python-boilerplate',  # Required
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -47,46 +49,46 @@ config: dict = {
     # For a discussion on single-sourcing the version across setup.py and the
     # project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    'version': '0.1.0', # Required
+    'version': '0.1.0',  # Required
 
     # This should be a valid link to your project's main homepage.
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    'url': 'https://github.com/Akman/python-boilerplate', # Optional
+    'url': 'https://github.com/Akman/python-boilerplate',  # Optional
 
     # A string containing the URL from which this version of the distribution
     # can be downloaded. This means that the URL can't be something like
     # .../BeagleVote-latest.tgz, but instead must be .../BeagleVote-0.45.tgz.
-    'download_url': 'https://github.com/Akman/python-boilerplate/archive/master.zip', # Optional
+    'download_url': 'https://github.com/Akman/python-boilerplate/archive/master.zip',  # Optional
 
     # List additional URLs that are relevant to your project as a dict.
     # This field corresponds to the "Project-URL" metadata fields:
     # https://packaging.python.org/specifications/core-metadata/#project-url-multiple-use
-    'project_urls': { # Optional
+    'project_urls': {  # Optional
         'Bug Reports': 'https://github.com/Akman/python-boilerplate/issues',
         'Source': 'https://github.com/Akman/python-boilerplate',
     },
 
     # This should be your name or the name of the organization which owns the
     # project.
-    'author': 'Alexander Kapitman', # Optional
+    'author': 'Alexander Kapitman',  # Optional
 
     # This should be a valid email address corresponding to the author listed
     # above.
-    'author_email': 'akman.ru@gmail.com', # Optional
+    'author_email': 'akman.ru@gmail.com',  # Optional
 
     # This should be a maintainer name or the name of the organization which
     # maintain the project.
-    # 'maintainer': '', # Optional
+    # 'maintainer': '',  # Optional
 
     # This should be a valid email address corresponding to the maintainer
     # listed above.
-    # 'maintainer_email': '', # Optional
+    # 'maintainer_email': '',  # Optional
 
     # Classifiers help users find your project by categorizing it.
     # For a list of valid classifiers, see https://pypi.org/classifiers/
-    'classifiers': [ # Optional
+    'classifiers': [  # Optional
 
         # How mature is this project? Common values are
         #   3 - Alpha
@@ -119,15 +121,15 @@ config: dict = {
     # This field may also be used to specify a particular version of a license
     # which is named via the Classifier field, or to indicate a variation or
     # exception to such a license.
-    'license': 'MIT', # Optional
+    'license': 'MIT',  # Optional
 
     # This includes the license file.
-    # 'license_file': 'LICENSE.txt', # Optional
+    'license_files': 'LICENSE.txt',  # Optional
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    'description': 'Python Boilerplate Project', # Optional
+    'description': 'Python Boilerplate Project',  # Optional
 
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
@@ -137,7 +139,7 @@ config: dict = {
     #
     # This field corresponds to the "Description" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#description-optional
-    'long_description': read('README.md'), # Optional
+    'long_description': read('README.md'),  # Optional
 
     # Denotes that our long_description is in Markdown; valid values are
     # text/plain, text/x-rst, and text/markdown
@@ -149,24 +151,24 @@ config: dict = {
     #
     # This field corresponds to the "Description-Content-Type" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#description-content-type-optional
-    'long_description_content_type': 'text/markdown', # Optional
+    'long_description_content_type': 'text/markdown',  # Optional
 
     # This field adds keywords for your project which will appear on the
     # project page. What does your project relate to?
     # Note that this is a string of words separated by whitespace, not a list.
-    'keywords': 'boilerplate setuptools development', # Optional
+    'keywords': 'boilerplate setuptools development',  # Optional
 
     # TODO: ?
-    # 'platforms': '', # Optional
+    # 'platforms': '',  # Optional
 
     # TODO: ?
-    # 'provides': '', # Optional
+    # 'provides': '',  # Optional
 
     # TODO: ?
-    # 'requires': '', # Optional
+    # 'requires': '',  # Optional
 
     # TODO: ?
-    # 'obsoletes': '', # Optional
+    # 'obsoletes': '',  # Optional
 
     # A boolean (True or False) flag specifying whether the project can be
     # safely installed and run from a zip file. If this argument is not
@@ -188,7 +190,7 @@ config: dict = {
     # already. If you want them to be installed, as well as being available
     # when the setup script is run, you should add them to install_requires
     # and setup_requires.
-    'setup_requires': [ # Optional
+    'setup_requires': [  # Optional
     ],
 
     # A string or list of strings specifying what other distributions need to be
@@ -200,7 +202,7 @@ config: dict = {
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    'install_requires': [ # Optional
+    'install_requires': [  # Optional
         # 'curses',
         'matplotlib',
         'numpy',
@@ -219,13 +221,14 @@ config: dict = {
     #
     # Similar to `install_requires` above, these must be valid existing
     # projects.
-    'extras_require': { # Optional
+    'extras_require': {  # Optional
         'dev': [
-            'pylint',
+            'flake8',
             'check-manifest'
         ],
         'test': [
-            'pytest'
+            'pytest',
+            'tox'
         ],
     },
 
@@ -238,7 +241,7 @@ config: dict = {
     # and refuse to install the project if the version does not match. If you
     # do not support Python 2, you can simplify this to '>=3.5' or similar, see
     # https://packaging.python.org/guides/distributing-packages-using-setuptools/#python-requires
-    'python_requires': '>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4', # Optional
+    'python_requires': '>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4',  # Optional
 
     # A dictionary mapping entry point group names to strings or lists of
     # strings defining the entry points. Entry points are used to support
@@ -251,7 +254,7 @@ config: dict = {
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # `pip` to create the appropriate form of executable for the target
     # platform.
-    'entry_points': { # Optional
+    'entry_points': {  # Optional
         'console_scripts': [
             'sample_console=sample.cli:main',
         ],
@@ -263,23 +266,23 @@ config: dict = {
     # Convert the source code from Python 2 to Python 3 with 2to3 during
     # the build process. See Supporting both Python 2 and Python 3 with
     # Setuptools for more details.
-    # 'use_2to3': False, # Optional
+    # 'use_2to3': False,  # Optional
 
     # A list of modules to search for additional fixers to be used during
     # the 2to3 conversion. See Supporting both Python 2 and Python 3 with
     # Setuptools for more details.
-    # 'use_2to3_fixers': [], # Optional
+    # 'use_2to3_fixers': [],  # Optional
 
     # TODO: ?
-    # 'use_2to3_exclude_fixers': [], # Optional
+    # 'use_2to3_exclude_fixers': [],  # Optional
 
     # List of doctest source files that need to be converted with 2to3.
     # See Supporting both Python 2 and Python 3 with Setuptools
     # for more details.
-    # 'convert_2to3_doctests': [], # Optional
+    # 'convert_2to3_doctests': [],  # Optional
 
     # List of binary scripts that need to be included in distribution.
-    'scripts': [ # Optional
+    'scripts': [  # Optional
         'bin/sample_script'
     ],
 
@@ -304,7 +307,7 @@ config: dict = {
     # setup_requires or tests_require. They will also be written into
     # the egg's metadata for use by tools like EasyInstall to use when
     # installing an .egg file.
-    'dependency_links': [ # Optional
+    'dependency_links': [  # Optional
         'https://download.lfd.uci.edu/pythonlibs/q5gtlas7/curses-2.2+utf8-cp37-cp37m-win_amd64.whl',
     ],
 
@@ -317,15 +320,16 @@ config: dict = {
     # that these required projects will not be installed on the system where
     # the tests are run, but only downloaded to the project's setup directory
     # if they're not already installed locally.
-    'tests_require': [ # Optional
+    'tests_require': [  # Optional
         'pytest',
+        'tox'
     ],
 
     # If set to True, this tells setuptools to automatically include any data
     # files it finds inside your package directories that are specified by
     # your MANIFEST.in file. For more information, see the section below on
     # Including Data Files.
-    'include_package_data': True, # Optional
+    'include_package_data': True,  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple.
@@ -339,7 +343,7 @@ config: dict = {
     #
     #   py_modules=["my_module"],
     #
-    'packages': find_packages(exclude=['docs']), # Required
+    'packages': find_packages(exclude=['docs']),  # Required
 
     # TODO: ?
     # 'package_dir': {}, # Optional
@@ -356,7 +360,7 @@ config: dict = {
     #
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
-    'package_data': { # Optional
+    'package_data': {  # Optional
         'sample': ['sample.dat'],
     },
 
@@ -376,12 +380,12 @@ config: dict = {
     # declare them in each project that contains any subpackages of
     # the namespace package, and as long as the namespace package's __init__.py
     # does not contain any code other than a namespace declaration.
-    # 'namespace_packages': [ # Optional
+    # 'namespace_packages': [  # Optional
     #     'sample'
     # ],
 
     # TODO: ?
-    # 'py_modules': '', # Optional
+    # 'py_modules': '',  # Optional
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
@@ -392,7 +396,7 @@ config: dict = {
     #     ('my_data', [
     #         'data/data_file'
     #     ])
-    # ], # Optional
+    # ],  # Optional
 
     # If you would like to use a different way of finding tests to run than
     # what setuptools normally uses, you can specify a module name and class
@@ -427,7 +431,7 @@ config: dict = {
     # Specifying this argument enables use of the test command to run
     # the specified test suite, e.g. via setup.py test. See the section on
     # the test command below for more details.
-    # 'test_suite': 'nose.collector', # Optional
+    # 'test_suite': 'nose.collector',  # Optional
 }
 
 setup(**config)

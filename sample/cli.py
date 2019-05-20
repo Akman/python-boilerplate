@@ -3,6 +3,7 @@
 import curses
 import sample.utils.hello
 
+
 def main():
     """Entry point for the console script"""
     screen = curses.initscr()
