@@ -30,8 +30,8 @@ may be appropriate.
 
 ----
 
-Все действия производятся из директории проекта,
-там где лежит ***setup.py***
+All actions are performed from the project directory itself
+where placed ***setup.py***
 
 ## Virtual environment
 
@@ -64,15 +64,6 @@ $ python -m pip install -U setuptools
 $ python -m pip install -U wheel
 ```
 
-### Install *curses* (Windows only)
-
-```bash
-$ pip install ./etc/curses-2.2+utf8-cp37-cp37m-win32.whl
-```
-
-The last version of *curses* for Windows is available here:
-https://www.lfd.uci.edu/~gohlke/pythonlibs/#curses
-
 ## Install package in editable mode
 
 In *editable* mode, the package will not installed on the system,
@@ -84,34 +75,32 @@ changes done.
 $ python -m pip install -e .
 ```
 
-### Install development dependencies
+### Install package in editable mode with development dependencies
 
 See *extras_require.dev* in **setup.py**
+
+Install flake8, pytest, tox and check-manifest packages.
 
 ```bash
 $ python -m pip install -e .[dev]
 ```
 
-### Install testing dependencies
-
-See *extras_require.test* in **setup.py**
-
-```bash
-$ python -m pip install -e .[test]
-```
-
 ## Lint
 
 ```bash
-$ python -m pylint -v sample
+$ python -m flake8 .
 ```
-
 
 ## Test
 
 ```bash
-$ python -m nose -v sample
-$ python -m unittest discover -v sample
+$ python -m pytest
+```
+
+## Manifest
+
+```bash
+$ check-manifest -v
 ```
 
 ## Run
@@ -120,12 +109,17 @@ $ python -m unittest discover -v sample
 
 ```bash
 $ python -m sample
+$ python sample
+$ sample_console
+$ sample_script
 ```
 
 ### GUI
 
 ```bash
 $ python -m sample --gui
+$ python sample --gui
+$ sample_gui
 ```
 
 [packaging guide]: https://packaging.python.org

@@ -9,3 +9,6 @@ recursive-include docs *
 
 # Include the data files
 recursive-include data *
+
+include tox.ini
+include .editorconfig

@@ -203,7 +203,7 @@ config: dict = {
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     'install_requires': [  # Optional
-        # 'curses',
+        'windows-curses; platform_system == "Windows"',
         'matplotlib',
         'numpy',
     ],
@@ -224,11 +224,9 @@ config: dict = {
     'extras_require': {  # Optional
         'dev': [
             'flake8',
-            'check-manifest'
-        ],
-        'test': [
             'pytest',
-            'tox'
+            'tox',
+            'check-manifest'
         ],
     },
 
@@ -300,16 +298,15 @@ config: dict = {
     # files or shared libraries), you probably do NOT need this argument and
     # shouldn't mess with it. For more details on how this argument works, see
     # the section below on Automatic Resource Extraction.
-    # 'eager_resources': [], # Optional
+    # 'eager_resources': [],  # Optional
 
     # A list of strings naming URLs to be searched when satisfying dependencies.
     # These links will be used if needed to install packages specified by
     # setup_requires or tests_require. They will also be written into
     # the egg's metadata for use by tools like EasyInstall to use when
     # installing an .egg file.
-    'dependency_links': [  # Optional
-        'https://download.lfd.uci.edu/pythonlibs/q5gtlas7/curses-2.2+utf8-cp37-cp37m-win_amd64.whl',
-    ],
+    # 'dependency_links': [  # Optional
+    # ],
 
     # If your project's tests need one or more additional packages besides
     # those needed to install it, you can use this option to specify them.
