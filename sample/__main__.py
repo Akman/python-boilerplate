@@ -11,6 +11,7 @@ def main():
         sample.gui.main()
     else:
         sample.cli.main()
+    return 0
 
 
 if __name__ == "__main__":

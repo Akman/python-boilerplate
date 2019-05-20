@@ -9,4 +9,3 @@ def main():
     screen = curses.initscr()
     screen.clear()
     print(sample.utils.hello.get_greeting())
-    return 0

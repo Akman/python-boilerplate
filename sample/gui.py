@@ -12,4 +12,3 @@ def main():
     plt.plot(point_x, np.sin(point_x))
     # Display the plot
     plt.show()
-    return 0
