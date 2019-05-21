@@ -1,8 +1,7 @@
 # Python boilerplate project
 
-----
-
 [![Build Status](https://travis-ci.org/Akman/python-boilerplate.svg?branch=master)](https://travis-ci.org/Akman/python-boilerplate)
+[![Requirements Status](https://requires.io/github/Akman/python-boilerplate/requirements.svg?branch=master)](https://requires.io/github/Akman/python-boilerplate/requirements/?branch=master)
 
 A boilerplate project that exists as an aid to the [Python Packaging User
 Guide][packaging guide]'s [Tutorial on Packaging and Distributing
@@ -18,8 +17,6 @@ Most of the configuration for project is done in the `setup.py` file.
 You should edit this file accordingly to adapt this boilerplate project
 to your needs.
 
-----
-
 This is the README file for the project.
 
 The file should use UTF-8 encoding and can be written using [markdown][md use]
@@ -31,8 +28,6 @@ Typical contents for this file would include an overview of the project, basic
 usage examples, etc. Generally, including the project changelog in here is not a
 good idea, although a simple “What's New” section for the most recent version
 may be appropriate.
-
-----
 
 All actions are performed from the project directory itself
 where placed ***setup.py***
@@ -83,7 +78,7 @@ $ python -m pip install -e .
 
 See *extras_require.dev* in **setup.py**
 
-Install flake8, pytest, tox, tox-venv and check-manifest packages.
+Install flake8, pytest, tox, tox-venv, codecov and check-manifest packages.
 
 ```bash
 $ python -m pip install -e .[dev]
@@ -99,6 +94,10 @@ $ python -m flake8 .
 
 ```bash
 $ python -m pytest
+```
+
+```bash
+$ python -m codecov
 ```
 
 ## Manifest

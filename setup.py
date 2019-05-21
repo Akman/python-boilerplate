@@ -227,7 +227,8 @@ config = {
             'pytest',
             'check-manifest',
             'tox',
-            'tox-venv'
+            'tox-venv',
+            'codecov',
         ],
     },
 
@@ -322,6 +323,7 @@ config = {
         'pytest',
         'tox',
         'tox-venv',
+        'codecov',
     ],
 
     # If set to True, this tells setuptools to automatically include any data

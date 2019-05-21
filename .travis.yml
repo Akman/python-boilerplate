@@ -11,10 +11,13 @@ matrix:
       env: TOXENV=py37
 
 install:
-  - pip install tox
+  - pip install tox codecov
 
 script:
   - tox
+
+after_success:
+  - codecov
 
 notifications:
   email: false
