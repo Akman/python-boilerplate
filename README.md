@@ -94,6 +94,7 @@ $ flake8 .
 ## Test
 
 ```bash
+$ coverage erase
 $ pytest --cov-report=xml --cov=sample/tests/
 $ coverage report
 $ coverage html
