@@ -1,6 +1,7 @@
 # Python boilerplate project
 
 [![Build Status](https://travis-ci.org/Akman/python-boilerplate.svg?branch=master)](https://travis-ci.org/Akman/python-boilerplate)
+[![codecov](https://codecov.io/gh/Akman/python-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/Akman/python-boilerplate)
 [![Requirements Status](https://requires.io/github/Akman/python-boilerplate/requirements.svg?branch=master)](https://requires.io/github/Akman/python-boilerplate/requirements/?branch=master)
 
 A boilerplate project that exists as an aid to the [Python Packaging User

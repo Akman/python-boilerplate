@@ -224,7 +224,9 @@ config = {
     'extras_require': {  # Optional
         'dev': [
             'flake8',
+            'coverage',
             'pytest',
+            'pytest-cov',
             'check-manifest',
             'tox',
             'tox-venv',
@@ -320,7 +322,9 @@ config = {
     # the tests are run, but only downloaded to the project's setup directory
     # if they're not already installed locally.
     'tests_require': [  # Optional
+        'coverage',
         'pytest',
+        'pytest-cov',
         'tox',
         'tox-venv',
         'codecov',
