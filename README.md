@@ -59,9 +59,9 @@ Further expected that virtual environment is **active**
 ## Install and update system packages
 
 ```bash
-$ python -m pip install -U pip
-$ python -m pip install -U setuptools
-$ python -m pip install -U wheel
+$ pip install -U pip
+$ pip install -U setuptools
+$ pip install -U wheel
 ```
 
 ## Install package in editable mode
@@ -72,36 +72,42 @@ are immediately available and no need to reinstall it every time when
 changes done.
 
 ```bash
-$ python -m pip install -e .
+$ pip install -e .
 ```
 
 ### Install package in editable mode with development dependencies
 
 See *extras_require.dev* in **setup.py**
 
-Install flake8, pytest, tox, tox-venv, codecov and check-manifest packages.
+Install flake8, pytest, tox, tox-venv, coverage, codecov and check-manifest packages.
 
 ```bash
-$ python -m pip install -e .[dev]
+$ pip install -e .[dev]
 ```
 
 ## Lint
 
 ```bash
-$ python -m flake8 .
+$ flake8 .
 ```
 
 ## Test
 
 ```bash
-$ python -m pytest
+$ pytest --cov-report=xml --cov=sample tests/
+$ coverage report
+$ coverage html
 ```
+
+## Verify metadata
+
+Verify meta-data and exit with an error if a check fails
 
 ```bash
-$ python -m codecov
+$ python setup.py check -m -s
 ```
 
-## Manifest
+Verify MANIFEST.in
 
 ```bash
 $ check-manifest -v --ignore tox.ini,.editorconfig

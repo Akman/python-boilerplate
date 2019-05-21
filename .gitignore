@@ -15,5 +15,10 @@ __pycache__/
 .tox
 .pytest_cache
 
+# due to using coverage
+.coverage
+coverage.*
+htmlcov/
+
 # ignore vscode settings
 .vscode/
