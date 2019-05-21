@@ -1,5 +1,9 @@
 # Python boilerplate project
 
+----
+
+[![Build Status](https://travis-ci.org/Akman/python-boilerplate.svg?branch=master)](https://travis-ci.org/Akman/python-boilerplate)
+
 A boilerplate project that exists as an aid to the [Python Packaging User
 Guide][packaging guide]'s [Tutorial on Packaging and Distributing
 Projects][distribution tutorial].
