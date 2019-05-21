@@ -11,7 +11,8 @@ matrix:
       env: TOXENV=py37
 
 install:
-  - pip install tox codecov
+  - pip install --user tox
+  - pip install --user codecov
 
 script:
   - tox
