@@ -79,7 +79,7 @@ $ python -m pip install -e .
 
 See *extras_require.dev* in **setup.py**
 
-Install flake8, pytest, tox and check-manifest packages.
+Install flake8, pytest, tox, tox-venv and check-manifest packages.
 
 ```bash
 $ python -m pip install -e .[dev]
@@ -100,7 +100,13 @@ $ python -m pytest
 ## Manifest
 
 ```bash
-$ check-manifest -v
+$ check-manifest -v --ignore tox.ini,.editorconfig
+```
+
+## Automation
+
+```bash
+$ tox
 ```
 
 ## Run

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 A setuptools based setup module.
 
@@ -17,7 +19,7 @@ from io import open
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 
-here: str = path.abspath(path.dirname(__file__))
+here = path.abspath(path.dirname(__file__))
 
 
 def read(file_name):
@@ -29,7 +31,7 @@ def read(file_name):
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
 # https://setuptools.readthedocs.io/en/latest/setuptools.html#options
-config: dict = {
+config = {
 
     # This is the name of your project. The first time you publish this
     # package, this name will be registered for you. It will determine how
@@ -223,8 +225,9 @@ config: dict = {
         'dev': [
             'flake8',
             'pytest',
+            'check-manifest',
             'tox',
-            'check-manifest'
+            'tox-venv'
         ],
     },
 
@@ -287,7 +290,7 @@ config: dict = {
     # are imported. This argument is only useful if the project will be
     # installed as a zipfile, and there is a need to have all of the listed
     # resources be extracted to the filesystem as a unit. Resources listed here
-    # should be ‘/'-separated paths, relative to the source root, so to list
+    # should be '/'-separated paths, relative to the source root, so to list
     # a resource foo.png in package bar.baz, you would include the string
     # bar/baz/foo.png in this argument.
     #
@@ -317,7 +320,8 @@ config: dict = {
     # if they're not already installed locally.
     'tests_require': [  # Optional
         'pytest',
-        'tox'
+        'tox',
+        'tox-venv',
     ],
 
     # If set to True, this tells setuptools to automatically include any data

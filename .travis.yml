@@ -1,9 +1,17 @@
 language: python
-python:
-  - "2.7"
-  - "3.7"
+
+matrix:
+  include:
+    - python: 2.7
+      env: TOXENV=py27
+    - python: 3.7
+      env: TOXENV=py37
+
 install:
-  - python setup.py install .[dev]
+  - pip install tox
+
 script:
-  - python -m flake8 .
-  - python -m pytest
+  - tox
+
+notifications:
+  email: false

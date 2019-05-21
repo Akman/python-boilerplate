@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """ sample/__main__.py """
 
 import sys

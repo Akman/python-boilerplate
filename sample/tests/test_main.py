@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """ sample/tests/test_main.py """
 
 

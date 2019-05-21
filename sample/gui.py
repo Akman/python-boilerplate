@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """ sample/gui.py """
 
 import matplotlib.pyplot as plt

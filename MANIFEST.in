@@ -9,8 +9,3 @@ recursive-include docs *
 
 # Include the data files
 recursive-include data *
-
-# Include other files
-include tox.ini
-include .travis.yml
-include .editorconfig
