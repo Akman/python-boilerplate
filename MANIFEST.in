@@ -2,7 +2,7 @@
 include README.md
 
 # Include the LICENCE
-include LICENSE.txt
+include LICENSE
 
 # Include the docs files
 recursive-include docs *
