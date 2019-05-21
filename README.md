@@ -106,11 +106,6 @@ Verify meta-data and exit with an error if a check fails
 
 ```bash
 $ python setup.py check -m -s
-```
-
-Verify MANIFEST.in
-
-```bash
 $ check-manifest -v --ignore tox.ini,.editorconfig
 ```
 
