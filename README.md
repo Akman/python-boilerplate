@@ -94,7 +94,7 @@ $ flake8 .
 ## Test
 
 ```bash
-$ pytest --cov-report=xml --cov=sample tests/
+$ pytest --cov-report=xml --cov=sample/tests/
 $ coverage report
 $ coverage html
 ```
