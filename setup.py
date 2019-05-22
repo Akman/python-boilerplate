@@ -231,7 +231,6 @@ config = {
             'pytest-cov',
             'tox',
             'tox-venv',
-            'codecov',
         ],
     },
 
@@ -328,7 +327,6 @@ config = {
         'pytest-cov',
         'tox',
         'tox-venv',
-        'codecov',
     ],
 
     # If set to True, this tells setuptools to automatically include any data
