@@ -8,7 +8,7 @@ import sample.gui
 
 
 def main():
-    """Main entry point"""
+    """ Main entry point """
     if len(sys.argv) > 1:
         sample.gui.main()
     else:

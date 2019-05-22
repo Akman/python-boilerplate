@@ -81,15 +81,15 @@ See *extras_require.dev* in **setup.py**
 
 Install development dependencies:
 
-  - flake8 - Check for style guide enforcement
-  - coverage - Measure code coverage
-  - pydocstyle - Check compliance with docstring conventions
-  - pytest - Test framework
-  - pytest-cov - Create coverage reports with pytest
-  - check-manifest - Check manifest file
-  - tox - Automate testing and manage virtual environments
-  - tox-venv - Create virtual environments using venv with tox
-  - codecov - Group, merge, archive, and compare coverage reports
+- flake8 - Check for style guide enforcement
+- coverage - Measure code coverage
+- pydocstyle - Check compliance with docstring conventions
+- pytest - Test framework
+- pytest-cov - Create coverage reports with pytest
+- check-manifest - Check manifest file
+- tox - Automate testing and manage virtual environments
+- tox-venv - Create virtual environments using venv with tox
+- codecov - Group, merge, archive, and compare coverage reports
 
 ```bash
 $ pip install -e .[dev]

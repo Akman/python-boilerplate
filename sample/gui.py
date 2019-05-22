@@ -7,7 +7,7 @@ import numpy as np
 
 
 def main():
-    """Entry point for gui"""
+    """ Entry point for gui """
     # Create a list of evenly-spaced numbers over the range
     point_x = np.linspace(0, 20, 100)
     # Plot the sine of each x point
