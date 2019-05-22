@@ -223,11 +223,12 @@ config = {
     # projects.
     'extras_require': {  # Optional
         'dev': [
+            'check-manifest',
             'flake8',
+            'pydocstyle',
             'coverage',
             'pytest',
             'pytest-cov',
-            'check-manifest',
             'tox',
             'tox-venv',
             'codecov',

@@ -79,7 +79,17 @@ $ pip install -e .
 
 See *extras_require.dev* in **setup.py**
 
-Install flake8, pytest, tox, tox-venv, coverage, codecov and check-manifest packages.
+Install development dependencies:
+
+  - flake8 - Check for style guide enforcement
+  - coverage - Measure code coverage
+  - pydocstyle - Check compliance with docstring conventions
+  - pytest - Test framework
+  - pytest-cov - Create coverage reports with pytest
+  - check-manifest - Check manifest file
+  - tox - Automate testing and manage virtual environments
+  - tox-venv - Create virtual environments using venv with tox
+  - codecov - Group, merge, archive, and compare coverage reports
 
 ```bash
 $ pip install -e .[dev]
@@ -88,16 +98,17 @@ $ pip install -e .[dev]
 ## Lint
 
 ```bash
-$ flake8 .
+$ flake8
+$ pydocstyle
 ```
 
 ## Test
 
 ```bash
-$ coverage erase
-$ pytest --cov-report=xml --cov=sample/tests/
+$ pytest
+$ pytest --cov-report xml:./coverage/coverage.xml
+$ pytest --cov-report html:./coverage/html
 $ coverage report
-$ coverage html
 ```
 
 ## Verify metadata

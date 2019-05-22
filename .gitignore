@@ -17,8 +17,7 @@ __pycache__/
 
 # due to using coverage
 .coverage
-coverage.*
-htmlcov/
+coverage/
 
 # ignore vscode settings
 .vscode/
